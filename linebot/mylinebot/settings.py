@@ -9,8 +9,14 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
+import django
 from pathlib import Path
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mylinebot.settings')
+django.setup()
+
+LINE_CHANNEL_ACCESS_TOKEN = '2YnfFy6Rf+qkkuWedKQHRfJ21Qh/Ztvp6Mx3BXz26tcEwvIQ4QAxrIoHS5Shno37Gpr0d021ZiYMVP7z2FMdRgzE+VKAluhCPA1mchUnBLnAnjAkzS9kkFxGI02rjQECninRwLJ74nJN+lbuAM9+7wdB04t89/1O/w1cDnyilFU='
+LINE_CHANNEL_SECRET = 'fd992488416e202095dfa8d28d053992'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +31,7 @@ SECRET_KEY = 'django-insecure-_tbet2qd@l)k!7&j^&ip)tg&72p45v$*i7t&v*frwr78(*z$qf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://91d6-140-127-32-5.ngrok-free.app']
 
 
 # Application definition
@@ -124,6 +130,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LINE_CHANNEL_ACCESS_TOKEN = '2YnfFy6Rf+qkkuWedKQHRfJ21Qh/Ztvp6Mx3BXz26tcEwvIQ4QAxrIoHS5Shno37Gpr0d021ZiYMVP7z2FMdRgzE+VKAluhCPA1mchUnBLnAnjAkzS9kkFxGI02rjQECninRwLJ74nJN+lbuAM9+7wdB04t89/1O/w1cDnyilFU='
 
-LINE_CHANNEL_SECRET = 'fd992488416e202095dfa8d28d053992'

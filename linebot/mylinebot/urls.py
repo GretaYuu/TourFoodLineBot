@@ -14,9 +14,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+#而為了要將這個Django應用程式(APP)的網址也加入到專案主程式中，所以，在Django專案主程式下的urls.py檔案中，加入以下的網址設定
 from django.contrib import admin
 from django.urls import path
+'''
+import os
+from django.core.wsgi import get_wsgi_application
 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mylinebot.settings')
+application = get_wsgi_application()
+'''
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
